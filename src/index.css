@@ -1,0 +1,54 @@
+.App{
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    margin: 0;
+}
+
+.container{
+    position: relative;
+    background-color: #F5F7FB;
+    height: 550px;
+    width: 550px;
+    margin: 20px;
+    padding: 40px 75px;
+}
+
+.bottom-left-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.top-right-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+select {
+    margin: 0 60px 20px 60px;
+}
+
+.first-page {
+    position: relative;
+    display: flex;
+    margin-top: 18%; 
+    flex-direction: column;
+    align-items: center; 
+}
+
+.startquiz-btn {
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color:rgb(192, 125, 255);
+    align-self: center;
+}
