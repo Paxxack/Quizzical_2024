@@ -1,25 +1,30 @@
-import React from "react"
+import React from "react";
+import { decode } from 'html-entities';
 
-export default function Question({correct_answer, incorrect_answers, question}){
-    let unshuffledArr = [correct_answer,...incorrect_answers]
-    console.log("Unshuffled:", unshuffledArr)
+export default function Question({
+  question,
+  handleSelection,
+  answerArr,
+  id
+}) {
 
-    
+const answer = answerArr.map((ans,index) => {
+  let style = ans.isSelected ? "selected" : "unSelected"
 
-    function shuffleMyArray(array){
-        
-        for(let i = 0; i < array.length - 1; i++){
-            console.log(i)
-            const j = Math.ceil(Math.random() * (i + 1))
-            console.log(j)
-            [array[i], array[j]] = [array[j], array[i]]
-        }
-        return array
-    }
+  return <div key={index + 100}>
+    <button className={style} onClick={() => handleSelection(ans.id, id)}>
+      {decode(ans.answer)}
+    </button>
+  </div>
+})
 
-    console.log("Shuffled:", shuffleMyArray(unshuffledArr))
-    
-    return <div>
-            <h1>Questions</h1>
-        </div>
+  return (
+    <div>
+      <h2 className="question">{decode(question)}</h2>
+      <div className="all-answers">
+        {answer}
+      </div>
+      <hr />
+    </div>
+  );
 }

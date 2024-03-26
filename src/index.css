@@ -1,3 +1,8 @@
+@font-face {
+    font-family: inter;
+    src: url("./Inter/static/Inter-Medium.ttf");
+}
+
 .App{
     background-color: black;
     height: 100vh;
@@ -8,6 +13,8 @@
 
 .container{
     position: relative;
+    display: flex;
+    flex-direction: column;
     background-color: #F5F7FB;
     height: 550px;
     width: 550px;
@@ -45,6 +52,55 @@ select {
 }
 
 .startquiz-btn {
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color:rgb(192, 125, 255);
+    align-self: center;
+}
+
+.question{
+    color: #293264;
+}
+
+.game-container{
+    position: relative;
+    z-index: 1;
+}
+
+.all-answers {
+    display: flex;
+}
+
+.unSelected {
+    border: solid 1px #293264;
+    border-radius: 10px;
+    margin-right: 15px;
+    color: #293264;
+    background-color: #F5F7FB;
+    font-family: inter;
+    font-size: 14px;
+    padding: 5px 20px;
+}
+
+hr {
+    margin-top: 30px;
+    border-color: #DBDEF0;
+}
+
+.selected {
+    border: none;
+    border-radius: 10px;
+    margin-right: 15px;
+    color: #293264;
+    background-color: #D6DBF5;
+    font-family: inter;
+    font-size: 14px;
+    padding: 5px 20px;
+}
+
+.check-answers {
     width: 200px;
     height: 40px;
     border: none;
