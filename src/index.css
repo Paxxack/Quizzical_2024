@@ -4,22 +4,31 @@
 }
 
 .App {
-  background-color: black;
+  background-color: rgb(193, 207, 222);
   height: 100vh;
   width: 100vw;
   position: absolute;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.container {
+.background {
   position: relative;
   display: flex;
   flex-direction: column;
   background-color: #f5f7fb;
-  height: 550px;
-  width: 550px;
+  height: 70%;
+  width: 35%;
   margin: 20px;
   padding: 40px 75px;
+}
+
+.container {
+  overflow: auto;
+  z-index: 1;
+  text-align: center;
 }
 
 .bottom-left-img {
@@ -71,6 +80,7 @@ select {
 
 .all-answers {
   display: flex;
+  justify-content: center;
 }
 
 .unSelected {

@@ -10,7 +10,9 @@ function App() {
 
   function startQuiz(e, formData) {
     e.preventDefault();
+
     const { cateQ, nbrQ, diffQ } = formData;
+
     fetch(`https://opentdb.com/api.php?${nbrQ}&${cateQ}&${diffQ}`)
       .then((res) => res.json())
       .then((data) =>
@@ -30,6 +32,7 @@ function App() {
             const answersWithId = ShuffledArr.map((each) => {
               return { answer: each, id: uuidv4(), isSelected: false };
             });
+
             return {
               id: uuidv4(),
               correct_answer: data.correct_answer,
@@ -43,8 +46,6 @@ function App() {
 
     setGameStage(2);
   }
-
-  // console.log(apiData)
 
   function handleSelection(id, questionId) {
     setApiData((prevData) => {
@@ -74,14 +75,12 @@ function App() {
   }
 
   function checkAnswers() {
-    console.log('bob');
     setGameStage(3);
   }
 
   function restartGame() {
     setGameStage(1);
   }
-  console.log(apiData);
 
   function scoreSummary() {
     let score = 0;
@@ -123,32 +122,34 @@ function App() {
 
   return (
     <div className="App">
-      <div className="container">
-        <div className="game-container">
-          {gameStage === 1 && <SelectionPage startQuiz={startQuiz} />}
-          {gameStage === 2 && quizz}
-          {gameStage === 3 && results}
+      <div className="background">
+        <div className="container">
+          <div className="game-container">
+            {gameStage === 1 && <SelectionPage startQuiz={startQuiz} />}
+            {gameStage === 2 && quizz}
+            {gameStage === 3 && results}
+          </div>
+          {gameStage === 2 && (
+            <button className="check-answers" onClick={checkAnswers}>
+              Check answers
+            </button>
+          )}
+          {gameStage === 3 && (
+            <button className="play-again" onClick={restartGame}>
+              Play again {scoreSummary()}/{apiData.length}
+            </button>
+          )}
         </div>
-        {gameStage === 2 && (
-          <button className="check-answers" onClick={checkAnswers}>
-            Check answers
-          </button>
-        )}
-        {gameStage === 3 && (
-          <button className="play-again" onClick={restartGame}>
-            Play again {scoreSummary()}/{apiData.length}
-          </button>
-        )}
         <img
           className="bottom-left-img"
           src="./blobbot.png"
           alt="background-images"
-        ></img>
+        />
         <img
           className="top-right-img"
           src="./blobtop.png"
           alt="background-images"
-        ></img>
+        />
       </div>
     </div>
   );
