@@ -14,7 +14,7 @@ export default function SelectionPage({ startQuiz }) {
     <div className="first-page">
       <h1>Quizzical</h1>
       <h3>Select the subject of your questions.</h3>
-      <form className="select-form" onSubmit={(e) => startQuiz(e, formData)}>
+      <form onSubmit={(e) => startQuiz(e, formData)}>
         <select name="nbrQ" onChange={handleChange} required>
           <option value="">Choose the number of questions</option>
           <option value="amount=3">3</option>

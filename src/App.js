@@ -3,6 +3,9 @@ import Question from './Components/Question';
 import Results from './Components/Results';
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import './Css/selectionPage.css';
+import './Css/question.css';
+import './Css/results.css';
 
 function App() {
   const [gameStage, setGameStage] = useState(1);
@@ -101,6 +104,7 @@ function App() {
       <Question
         key={index}
         id={id}
+        numQuestion={index + 1}
         answerArr={answerArr}
         question={question}
         handleSelection={handleSelection}
@@ -130,12 +134,12 @@ function App() {
             {gameStage === 3 && results}
           </div>
           {gameStage === 2 && (
-            <button className="check-answers" onClick={checkAnswers}>
+            <button className="check-answers-btn" onClick={checkAnswers}>
               Check answers
             </button>
           )}
           {gameStage === 3 && (
-            <button className="play-again" onClick={restartGame}>
+            <button className="check-answers-btn" onClick={restartGame}>
               Play again {scoreSummary()}/{apiData.length}
             </button>
           )}

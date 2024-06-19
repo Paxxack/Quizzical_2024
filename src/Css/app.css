@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+}
+
+@font-face {
+  font-family: inter;
+  src: url('../Inter/static/Inter-Medium.ttf');
+}
+
+hr {
+  margin-top: 2em;
+  border-color: #dbdef0;
+}
+
+/*----------------------- Specific properties -----------------------------*/
+
+.App {
+  background-color: rgb(193, 207, 222);
+  margin: 0 auto;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f7fb;
+  height: 80%;
+  width: 85%;
+}
+
+.container {
+  overflow: auto;
+  z-index: 1;
+  text-align: center;
+}
+
+.bottom-left-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.top-right-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.game-container {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.check-answers-btn {
+  padding: 1em 3em;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(192, 125, 255);
+  align-self: center;
+  font-weight: 700;
+  font-size: 17px;
+  margin: 2em 0 4em 0;
+}
+
+.ans-pills-properties {
+  margin-top: 0.6em;
+  border-radius: 10px;
+  margin-right: 1em;
+  padding: 0.3em 1.5em;
+  font-family: inter;
+  font-size: 14px;
+}
+
+/*----------------------- MEDIA QUERIES -----------------------------*/
+
+@media (width < 220px) {
+  .check-answers-btn {
+    padding: 0.8em 1.25em;
+  }
+
+  .top-right-img {
+    transform: scale(70%);
+    top: -29px;
+    right: -29px;
+  }
+
+  .bottom-left-img {
+    transform: scale(70%);
+    bottom: -18px;
+    left: -22px;
+  }
+}

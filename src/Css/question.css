@@ -1,0 +1,33 @@
+.question {
+  color: #293264;
+  max-width: 60%;
+  margin: auto;
+  margin-top: 1.5em;
+}
+
+.all-answers {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 0.75em;
+}
+
+.selected {
+  border: none;
+  color: #293264;
+  background-color: #d6dbf5;
+  font-size: 14px;
+}
+
+.unSelected {
+  border: solid 1px #293264;
+  color: #293264;
+  background-color: #f5f7fb;
+  font-size: 14px;
+}
+
+@media (width < 660px) {
+  .question {
+    max-width: 80%;
+  }
+}

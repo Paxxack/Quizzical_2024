@@ -1,0 +1,23 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+select {
+  margin-bottom: 1.25em;
+}
+
+.first-page {
+  display: flex;
+  margin-top: 18%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.startquiz-btn {
+  padding: 1.5em 4em;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(192, 125, 255);
+  align-self: center;
+}
