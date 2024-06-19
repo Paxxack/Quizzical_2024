@@ -13,7 +13,9 @@ export default function Results({ answerArr, question, correct_answer }) {
 
     return (
       <div key={index + 100}>
-        <button className={styleResult}>{decode(ans.answer)}</button>
+        <button className={`${styleResult} ans-pills-properties`}>
+          {decode(ans.answer)}
+        </button>
       </div>
     );
   });
