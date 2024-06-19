@@ -1,7 +1,7 @@
 .question {
-  color: #293264;
+  color: var(--font-color);
   max-width: 60%;
-  margin: auto;
+  margin-inline: auto;
   margin-top: 1.5em;
 }
 
@@ -14,16 +14,16 @@
 
 .selected {
   border: none;
-  color: #293264;
+  color: var(--font-color);
   background-color: #d6dbf5;
-  font-size: 14px;
+  font-size: var(--font-small);
 }
 
 .unSelected {
-  border: solid 1px #293264;
-  color: #293264;
-  background-color: #f5f7fb;
-  font-size: 14px;
+  border: solid 1px var(--font-color);
+  color: var(--font-color);
+  background-color: var(--neutral-bg-color);
+  font-size: var(--font-small);
 }
 
 @media (width < 660px) {

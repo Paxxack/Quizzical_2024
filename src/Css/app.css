@@ -1,3 +1,14 @@
+:root {
+  --btn-bg-color: rgb(192, 125, 255);
+  --font-color: #293264;
+  --results-color: #8589aa;
+  --neutral-bg-color: #f5f7fb;
+
+  --font-small: 14px;
+
+  --border-radius: 10px;
+}
+
 body {
   margin: 0;
 }
@@ -28,7 +39,7 @@ hr {
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: #f5f7fb;
+  background-color: var(--neutral-bg-color);
   height: 80%;
   width: 85%;
 }
@@ -61,8 +72,8 @@ hr {
 .check-answers-btn {
   padding: 1em 3em;
   border: none;
-  border-radius: 10px;
-  background-color: rgb(192, 125, 255);
+  border-radius: var(--border-radius);
+  background-color: var(--btn-bg-color);
   align-self: center;
   font-weight: 700;
   font-size: 17px;
@@ -70,12 +81,11 @@ hr {
 }
 
 .ans-pills-properties {
-  margin-top: 0.6em;
-  border-radius: 10px;
-  margin-right: 1em;
+  margin: 0.6em 1em 0 0;
+  border-radius: var(--border-radius);
   padding: 0.3em 1.5em;
   font-family: inter;
-  font-size: 14px;
+  font-size: var(--font-small);
 }
 
 /*----------------------- MEDIA QUERIES -----------------------------*/
