@@ -114,3 +114,9 @@ hr {
     width: 90%;
   }
 }
+
+@media (width <= 320px) {
+  .ans-pills-properties {
+    margin: 0.6em 0 0 0;
+  }
+}
